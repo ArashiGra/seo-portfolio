@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Store placeholder illustration">
+  <rect width="800" height="560" fill="#f7f2ea" />
+  <rect x="70" y="70" width="660" height="420" rx="24" fill="#ffffff" stroke="#dfd8cf" stroke-width="3" />
+  <rect x="120" y="140" width="220" height="200" rx="18" fill="#fff4e8" stroke="#dfd8cf" />
+  <rect x="360" y="140" width="320" height="200" rx="18" fill="#fff4e8" stroke="#dfd8cf" />
+  <rect x="120" y="360" width="560" height="80" rx="16" fill="#2f2f2f" />
+  <text x="120" y="126" font-family="Arial, sans-serif" font-size="34" fill="#2f2f2f">老屋咖啡與散步節點</text>
+  <text x="120" y="410" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">Concept Visual｜嘉義散步路線</text>
+</svg>

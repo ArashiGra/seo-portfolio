@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Route placeholder illustration">
+  <rect width="800" height="560" fill="#f7f2ea" />
+  <rect x="54" y="62" width="692" height="436" rx="28" fill="#ffffff" stroke="#dfd8cf" stroke-width="3" />
+  <path d="M150 410c70-80 160-120 250-120 100 0 150 52 250 102" stroke="#ef7f1a" stroke-width="10" fill="none" stroke-linecap="round" />
+  <circle cx="150" cy="410" r="20" fill="#2f2f2f" />
+  <circle cx="400" cy="290" r="18" fill="#ef7f1a" />
+  <circle cx="650" cy="512" r="18" fill="#2f2f2f" />
+  <text x="100" y="138" font-family="Arial, sans-serif" font-size="38" fill="#2f2f2f">嘉義咖啡散步路線</text>
+  <text x="100" y="190" font-family="Arial, sans-serif" font-size="24" fill="#716d67">Route Concept｜嘉義咖啡散步路線</text>
+</svg>
