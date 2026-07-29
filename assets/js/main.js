@@ -1,6 +1,6 @@
 const siteConfig = {
-  baseUrl: 'https://arashigira.github.io/seo-portfolio/',
-  articleUrl: 'https://arashigira.github.io/seo-portfolio/article/chiayi-cafes-half-day/',
+  baseUrl: 'https://arashigra.github.io/seo-portfolio/',
+  articleUrl: 'https://arashigra.github.io/seo-portfolio/article/chiayi-cafes-half-day/',
   ctaUrls: {
     route_map_click: '',
     two_hour_version_click: '',
@@ -12,8 +12,14 @@ const siteConfig = {
 };
 
 function estimateReadingTime(text) {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  const minutes = Math.max(4, Math.ceil(words / 180));
+  const cjkMatches = text.match(/[\u3400-\u9FFF]/g) || [];
+  const latinMatches = text.match(/[A-Za-z]+/g) || [];
+  const chineseChars = cjkMatches.length;
+  const latinWords = latinMatches.length;
+  const chineseMinutes = chineseChars / 400;
+  const latinMinutes = latinWords / 200;
+  const totalMinutes = chineseMinutes + latinMinutes;
+  const minutes = Math.max(2, Math.ceil(totalMinutes));
   return `${minutes} 分鐘`;
 }
 
