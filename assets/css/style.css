@@ -479,7 +479,7 @@ h2 {
   width: fit-content;
   border-radius: 999px;
   background: rgba(197, 85, 32, 0.11);
-  color: var(--accent-strong);
+  color: var(--accent);
   font-size: 0.82rem;
   font-weight: 700;
   line-height: 1;

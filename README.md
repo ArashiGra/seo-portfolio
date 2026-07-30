@@ -13,7 +13,7 @@ seo-portfolio 是一個個人 SEO／GEO 作品集專案，用來展示如何把�
 內容設計重點包含：
 
 - 以旅客情境安排路線，而不是只列店家清單
-- 提供四小時行程、兩小時精簡版與雨天版本
+- 提供完整下午時間軸、兩小時走法與雨天調整
 - 在文章中標示店家與館舍資訊仍需以官方最新公告為準
 - 使用 BlogPosting 與 BreadcrumbList JSON-LD 協助搜尋引擎理解頁面內容
 - 使用 sitemap.xml 與 robots.txt 支援基本爬取與索引流程
@@ -115,9 +115,8 @@ sitemap.xml 列出首頁與文章頁網址，協助搜尋引擎發現主要頁�
 
 目前不得聲稱 Rich Results Test 已通過、Search Console 已提交或頁面已索引；這些都必須在正式發布後人工確認。
 
-## 尚待人工完成項目
+## 發布後待完成項目
 
-- 店家官方來源核對
-- Google Maps 導航連結
-- 1200×630 PNG／JPG OG 圖片
-- Search Console 提交與索引確認
+- Google Rich Results Test 驗證
+- Google Search Console 提交 sitemap.xml
+- URL Inspection 與索引狀態確認
