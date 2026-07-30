@@ -51,18 +51,23 @@ a.button {
 }
 
 .skip-link {
-  position: absolute;
+  position: fixed;
   left: 1rem;
-  top: -3rem;
+  top: 1rem;
+  transform: translateY(-200%);
   background: var(--text);
   color: white;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  z-index: 10;
+  z-index: 9999;
 }
 
 .skip-link:focus {
-  top: 1rem;
+  transform: translateY(0);
+}
+
+#main-content {
+  scroll-margin-top: 80px;
 }
 
 .container {
