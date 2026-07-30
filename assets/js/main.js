@@ -1,16 +1,3 @@
-const siteConfig = {
-  baseUrl: 'https://arashigra.github.io/seo-portfolio/',
-  articleUrl: 'https://arashigra.github.io/seo-portfolio/article/chiayi-cafes-half-day/',
-  ctaUrls: {
-    route_map_click: '',
-    two_hour_version_click: '',
-    rainy_day_version_click: '',
-    store_navigation_click: '',
-    official_info_click: '',
-    alternative_store_click: '',
-  },
-};
-
 function estimateReadingTime(text) {
   const cjkMatches = text.match(/[\u3400-\u9FFF]/g) || [];
   const latinMatches = text.match(/[A-Za-z]+/g) || [];
@@ -27,15 +14,12 @@ function trackEvent(eventName) {
   if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, { event_category: 'engagement' });
   } else {
-    console.info(`[GA4 placeholder] ${eventName}`);
+    console.info(`[GA4 tracking] ${eventName}`);
   }
 }
 
 function attachCtaHandlers() {
   document.querySelectorAll('[data-cta]').forEach((element) => {
-    if (element.disabled || element.getAttribute('aria-disabled') === 'true') {
-      return;
-    }
 
     element.addEventListener('click', (event) => {
       const eventName = element.getAttribute('data-cta');
@@ -62,6 +46,30 @@ function attachCtaHandlers() {
   });
 }
 
+
+function setupResponsiveToc() {
+  const toc = document.querySelector('.toc');
+  if (!toc || typeof window.matchMedia !== 'function') {
+    return;
+  }
+
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  const syncTocState = () => {
+    if (mediaQuery.matches) {
+      toc.removeAttribute('open');
+    } else {
+      toc.setAttribute('open', '');
+    }
+  };
+
+  syncTocState();
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', syncTocState);
+  } else if (typeof mediaQuery.addListener === 'function') {
+    mediaQuery.addListener(syncTocState);
+  }
+}
+
 function updateReadingTime() {
   const readingIndicator = document.querySelector('[data-reading-time]');
   const articleBody = document.querySelector('[data-article-body]');
@@ -75,4 +83,5 @@ function updateReadingTime() {
 document.addEventListener('DOMContentLoaded', () => {
   updateReadingTime();
   attachCtaHandlers();
+  setupResponsiveToc();
 });
